@@ -1,0 +1,23 @@
+﻿-- Student Database Project
+
+
+CREATE TABLE students (
+    roll_no INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(30),
+    marks INT
+);
+
+
+INSERT INTO students VALUES (101, 'Aarav', 'CS', 85);
+INSERT INTO students VALUES (102, 'Meena', 'IT', 92);
+INSERT INTO students VALUES (103, 'Ravi', 'CS', 76);
+INSERT INTO students VALUES (104, 'Priya', 'AI', 89);
+
+
+-- Sample Queries
+SELECT * FROM students;
+SELECT * FROM students WHERE department = 'CS';
+SELECT * FROM students ORDER BY marks DESC LIMIT 1;
+UPDATE students SET marks = 90 WHERE roll_no = 103;
+DELETE FROM students WHERE roll_no = 102;
